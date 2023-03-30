@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-Login 
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Login</header>
+      <form action="#">
+        <!-- Section for Email Address -->
+        <section class="field email">
+          <label for="email">Email Address</label>
+          <div class="input-area">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <i class="fas fa-envelope" alt="Email Icon"></i>
+            <i class="fas fa-exclamation-circle" alt="Error Icon"></i>
+          </div>
+          <small class="error-text">Email can't be blank</small>
+        </section>
+
+        <!-- Section for Password -->
+        <section class="field password">
+          <label for="password">Password</label>
+          <div class="input-area">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+            <i class="fas fa-lock" alt="Password Icon"></i>
+            <i class="fas fa-exclamation-circle" alt="Error Icon"></i>
+          </div>
+          <small class="error-text">Password can't be blank</small>
+        </section>
+
+        <!-- Section for Forgot Password -->
+        <section class="pass-link">
+          <a href="#">Forgot Password?</a>
+        </section>
+
+        <!-- Login button -->
+        <button type="submit">Login</button>
+
+        <!-- Signup Link Section -->
+        <section class="signup-link">
+          <p>Not yet a member? <a href="#">Signup now</a></p>
+        </section>
+      </form>
+    </div>
+  </body>
 </html>
