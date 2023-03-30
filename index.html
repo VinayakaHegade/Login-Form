@@ -12,6 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
+
   <body>
     <div class="wrapper">
       <header>Login</header>
@@ -27,10 +28,13 @@
               placeholder="Enter your email address"
               required
             />
-            <i class="fas fa-envelope" alt="Email Icon"></i>
-            <i class="fas fa-exclamation-circle" alt="Error Icon"></i>
+            <i class="icon fas fa-envelope" alt="Email Icon"></i>
+            <i
+              class="error error-icon fas fa-exclamation-circle"
+              alt="Error Icon"
+            ></i>
           </div>
-          <small class="error-text">Email can't be blank</small>
+          <small class="error error-text">Email can't be blank</small>
         </section>
 
         <!-- Section for Password -->
@@ -44,10 +48,13 @@
               placeholder="Enter your password"
               required
             />
-            <i class="fas fa-lock" alt="Password Icon"></i>
-            <i class="fas fa-exclamation-circle" alt="Error Icon"></i>
+            <i class="icon fas fa-lock" alt="Password Icon"></i>
+            <i
+              class="error error-icon fas fa-exclamation-circle"
+              alt="Error Icon"
+            ></i>
           </div>
-          <small class="error-text">Password can't be blank</small>
+          <small class="error error-text">Password can't be blank</small>
         </section>
 
         <!-- Section for Forgot Password -->
@@ -64,5 +71,7 @@
         </section>
       </form>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

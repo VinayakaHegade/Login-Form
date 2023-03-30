@@ -1,0 +1,155 @@
+/* Import Poppins from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* CSS reset to normalize default margin and padding across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS color variables */
+:root {
+    --color-primary: #5372F0;
+    --color-secondary: #2C52ED;
+    --color-gray: #BFBFBF;
+    --color-danger: #DC3545;
+    --bg-color: #FFF;
+    --bg-page-color: #F0FFFF;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    background: var(--bg-page-color);
+}
+
+.wrapper {
+    width: 380px;
+    background: var(--bg-color);
+    text-align: center;
+    border-radius: 5px;
+    padding: 40px 30px 20px 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper header {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.wrapper form {
+    margin: 40px 0;
+}
+
+.field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form .field .shake {
+    animation: shake 0.3s ease-in-out infinite;
+}
+
+form .field label {
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form .field .input-area {
+    position: relative;
+}
+
+form input,
+button {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    padding: 0 45px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid var(--color-gray);
+    border-bottom-width: 2px;
+}
+
+form input::placeholder {
+    color: var(--color-gray);
+    font-size: 16px;
+}
+
+form .field i {
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+form .field .icon {
+    left: 15px;
+    color: var(--color-gray);
+}
+
+form .field .error-icon {
+    right: 15px;
+    color: var(--color-danger);
+}
+
+form .field .error-text {
+    display: flex;
+    margin-top: 5px;
+    color: var(--color-danger);
+}
+
+form .field .error {
+    display: none;
+}
+
+form .pass-link {
+    text-align: left;
+    margin-top: -10px;
+}
+
+.wrapper a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
+form button {
+    margin: 30px 0;
+    border: none;
+    color: var(--bg-color);
+    background: var(--color-primary);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+form button:hover {
+    background: var(--color-secondary);
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        margin-left: 0;
+    }
+
+    20%,
+    80% {
+        margin-left: -12px;
+    }
+
+    40%,
+    60% {
+        margin-left: 12px;
+    }
+}
