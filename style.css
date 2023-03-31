@@ -28,7 +28,7 @@ body {
 }
 
 .wrapper {
-    width: 380px;
+    width: 400px;
     background: var(--bg-color);
     text-align: center;
     border-radius: 5px;
@@ -36,31 +36,32 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper header {
+header {
     font-size: 35px;
     font-weight: 600;
 }
 
-.wrapper form {
+form {
     margin: 40px 0;
 }
 
-.field {
+form .field {
     width: 100%;
     margin-bottom: 20px;
 }
 
-form .field .shake {
-    animation: shake 0.3s ease-in-out infinite;
+form .shake {
+    animation: shake 0.3s ease-in-out;
 }
 
-form .field label {
+form label {
     display: flex;
     font-size: 18px;
     margin-bottom: 5px;
 }
 
-form .field .input-area {
+form .email-input-container,
+form .password-input-container {
     position: relative;
 }
 
@@ -100,13 +101,20 @@ form .field .error-icon {
 }
 
 form .field .error-text {
-    display: flex;
     margin-top: 5px;
     color: var(--color-danger);
 }
 
-form .field .error {
+i.error,
+small.error {
     display: none;
+}
+
+form .email.error i.error,
+form .email.error small,
+form .password.error i.error,
+form .password.error small {
+    display: flex;
 }
 
 form .pass-link {
@@ -153,3 +161,4 @@ form button:hover {
         margin-left: 12px;
     }
 }
+

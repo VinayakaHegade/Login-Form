@@ -20,13 +20,13 @@
         <!-- Section for Email Address -->
         <section class="field email">
           <label for="email">Email Address</label>
-          <div class="input-area">
+          <div class="email-input-container">
             <input
-              type="email"
+              type="text"
               name="email"
               id="email"
               placeholder="Enter your email address"
-              required
+              autocomplete="off"
             />
             <i class="icon fas fa-envelope" alt="Email Icon"></i>
             <i
@@ -34,19 +34,19 @@
               alt="Error Icon"
             ></i>
           </div>
-          <small class="error error-text">Email can't be blank</small>
+          <small class="error error-text">Email cannot be blank</small>
         </section>
 
         <!-- Section for Password -->
         <section class="field password">
           <label for="password">Password</label>
-          <div class="input-area">
+          <div class="password-input-container">
             <input
               type="password"
               name="password"
               id="password"
               placeholder="Enter your password"
-              required
+              autocomplete="off"
             />
             <i class="icon fas fa-lock" alt="Password Icon"></i>
             <i
@@ -54,7 +54,7 @@
               alt="Error Icon"
             ></i>
           </div>
-          <small class="error error-text">Password can't be blank</small>
+          <small class="error error-text">Password cannot be blank</small>
         </section>
 
         <!-- Section for Forgot Password -->
