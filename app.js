@@ -5,32 +5,34 @@ const passwordSection = form.querySelector(".password");
 const password = document.getElementById("password");
 
 form.addEventListener("submit", (e) => {
+  // Prevent the form from submitting
+  e.preventDefault();
+
   // trim method to remove the white spaces
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
-  // preventing form from submitting
-  e.preventDefault();
-
+  // Validate the email and password
   checkEmail();
   checkPassword();
 
-  // remove shake class after 500ms
+  // Remove the shake class after 500ms
   setTimeout(() => {
     emailSection.classList.remove("shake");
     passwordSection.classList.remove("shake");
   }, 500);
 
-  // if email and password section element doesn't contain error class, then we can say user has entered valid details
+  // If the email and password sections don't contain the error class, redirect the user to the desired location
   if (
     !emailSection.classList.contains("error") &&
     !passwordSection.classList.contains("error")
   ) {
-    window.location.href = "#"; // just replace # with url wherever you want to redirect
+    window.location.href = "#"; // Replace "#" with the desired location
   }
 
+  // Check if the email is valid
   function checkEmail() {
-    let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // regex to validate email
+    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Regex to validate email
 
     if (!emailValue.match(pattern)) {
       if (!emailSection.classList.contains("error")) {
@@ -38,7 +40,8 @@ form.addEventListener("submit", (e) => {
       } else if (!emailSection.classList.contains("shake")) {
         emailSection.classList.add("shake");
       }
-      let errorText = emailSection.querySelector(".error-text");
+
+      const errorText = emailSection.querySelector(".error-text");
       emailValue !== ""
         ? (errorText.innerText = "Enter a valid email address")
         : (errorText.innerText = "Email cannot be blank");
@@ -47,6 +50,7 @@ form.addEventListener("submit", (e) => {
     }
   }
 
+  // Check if the password is valid
   function checkPassword() {
     if (passwordValue.length < 8) {
       if (!passwordSection.classList.contains("error")) {
@@ -54,6 +58,7 @@ form.addEventListener("submit", (e) => {
       } else if (!passwordSection.classList.contains("shake")) {
         passwordSection.classList.add("shake");
       }
+
       let errorText = passwordSection.querySelector(".error-text");
       passwordValue !== ""
         ? (errorText.innerText =
@@ -63,4 +68,5 @@ form.addEventListener("submit", (e) => {
       passwordSection.classList.remove("shake", "error");
     }
   }
+
 });
